@@ -11,16 +11,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/09a3488589.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
 
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header class="header">
         <a href="index.php" title="Home" class="header-logo">
-            <img src="imagens/logo.png" alt="Logotipo Meu Carrinho Novinho">
+            <img src="img/logo.png" alt="Logotipo Meu Carrinho Novinho">
         </a>
 
         <a href="javascript:menu()" title="Menu" class="header-menu">
@@ -68,8 +68,8 @@
         <p>Desenvolvido por Tarcisio Uchoa</p>
     </footer>
 
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/lightbox.min.js"></script>
+    <script src="vendor/jquery/jquery-3.6.0.min.js"></script>
+    <script src="vendor/lightbox2/js/lightbox.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

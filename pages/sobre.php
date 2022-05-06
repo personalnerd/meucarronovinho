@@ -13,6 +13,7 @@
             <p>Foi utilizado PHP para tratamento de rotas e separação de arquivos.</p>
             <p>Além disso, foi implementado o deploy automático em servidor de hospedagem com cPanel, a partir do Github Actions,
                  seguindo as dicas do canal <a href="https://www.youtube.com/watch?v=3cLbh-k2qKk" target="_blank">Código Fonte TV</a>.</p>
+            <p>Imagens do banner na página inicial roubadas na cara dura do site <a href="https://bhmultimarcas.com.br/" target="_blank">BH Multimarcas</a></p>
         </div>
     </div>
 

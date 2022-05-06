@@ -57,7 +57,7 @@ img {
         display: none;
         
         &.show {
-            @media (max-width: $md) {
+            @media (max-width: $lg) {
                 @include bg;
             }
         }

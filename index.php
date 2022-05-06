@@ -19,8 +19,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-
-    <script src="https://kit.fontawesome.com/09a3488589.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
 
     <link rel="stylesheet" href="css/style.css">
@@ -52,9 +52,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="quem-somos" title="Quem somos">
+                        <a href="sobre" title="Sobre">
                             <i class="fa-solid fa-address-card"></i>
-                            Quem Somos
+                            Sobre
                         </a>
                     </li>
                     <li>
@@ -68,7 +68,7 @@
         </div>
     </header>
 
-    <main class="container main">
+    <main>
         <?php
             $pagina = $_GET["param"] ?? "home";
             $pagina = "pages/{$pagina}.php";
@@ -82,7 +82,16 @@
     </main>
 
     <footer class="footer">
-        <p>Desenvolvido por Tarcisio Uchoa</p>
+        <p>Desenvolvido por <strong>Tarcisio Uchoa</strong><br>
+        para a aula de SASS na <a href="https://webdev.alfaumuarama.edu.br/" target="_blank">Pós-Graduação em Desenvolvimento de Aplicações para Internet e Dispositivos Móveis</a><br>
+        UniAlfa Umuarama</p>
+        <ul class="redes-sociais">
+            <li><a href="https://github.com/personalnerd" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/in/tcavalcante" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://twitter.com/tarcis_io" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://facebook.com/tarcisio" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+            
+        </ul>
     </footer>
 
     <script src="vendor/jquery/jquery-3.6.0.min.js"></script>

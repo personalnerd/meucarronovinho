@@ -1,9 +1,7 @@
 <?php if ( !isset($pagina) ) exit; ?>
 
-<div id="banner" class="banner"></div>
-
 <div class="container conteudo">
-    <h1 class="text-center">Veículos em Destaque</h1>
+    <h1 class="text-center">Veículos em Estoque</h1>
 
     <div class="grid-veiculos">
         <div class="grid-veiculos__coluna">
@@ -46,12 +44,45 @@
                 </a>
             </p>
         </div>
+        <div class="grid-veiculos__coluna">
+            <img src="img/5.jpg" alt="Volkswagen Polo">
+            <h2>Volkswagen Polo</h2>
+            <p>
+                <a href="polo" title="Volkswagen Polo" class="btn-primario">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Detalhes
+                </a>
+            </p>
+        </div>
+        <div class="grid-veiculos__coluna">
+            <img src="img/6.jpg" alt="Ford EcoSport">
+            <h2>Ford EcoSport</h2>
+            <p>
+                <a href="ecosport" title="Ford EcoSport" class="btn-primario">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Detalhes
+                </a>
+            </p>
+        </div>
+        <div class="grid-veiculos__coluna">
+            <img src="img/7.jpg" alt="Ford Territory">
+            <h2>Ford Territory</h2>
+            <p>
+                <a href="territory" title="Ford Territory" class="btn-primario">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Detalhes
+                </a>
+            </p>
+        </div>
+        <div class="grid-veiculos__coluna">
+            <img src="img/8.jpg" alt="Ford Ranger">
+            <h2>Ford Ranger</h2>
+            <p>
+                <a href="ranger" title="Ford Ranger" class="btn-primario">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Detalhes
+                </a>
+            </p>
+        </div>
     </div>
-
-    <p class="text-center">
-        <a href="estoque" title="Confira todo o estoque" class="btn-primario">
-            <i class="fa-solid fa-car"></i>
-            Confira todo o estoque
-        </a>
-    </p>
 </div>

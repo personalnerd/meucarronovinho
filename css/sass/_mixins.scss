@@ -1,0 +1,18 @@
+@mixin sombra($cor) {
+    box-shadow: 0 0 10px $cor;
+}
+
+@mixin bg {
+    background-color: $bg;
+    display: inline-block;
+    width: 100%;
+}
+
+@mixin circulo($size) {
+    width: $size;
+    height: $size;
+    border-radius: $size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

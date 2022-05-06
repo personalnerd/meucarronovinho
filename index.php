@@ -57,12 +57,6 @@
                             Sobre
                         </a>
                     </li>
-                    <li>
-                        <a href="contato" title="Contato">
-                            <i class="fa-solid fa-envelope"></i>
-                            Contato
-                        </a>
-                    </li>
                 </ul>
             </nav>
         </div>

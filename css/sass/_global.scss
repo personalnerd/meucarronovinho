@@ -1,0 +1,234 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: $font;
+    box-sizing: border-box;
+}
+
+
+body {
+    color: $text-color;
+    padding-top: $header-height;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: $link-color;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header {
+    @include bg;
+    @include sombra($text-color);
+    min-height: $header-height;
+    position: fixed;
+    top: 0;
+
+    &__logo img {
+        height: 70px;
+        margin-top: 5px
+    }
+
+    &__menu {
+        @include circulo(40px);
+        text-decoration: none;
+        float: right;
+        margin: 20px;
+        color: $text-color;        
+        transition: all ease .2s;
+
+        &:hover {
+            @include sombra($text-color);
+        }
+    }
+
+    &__nav {        
+        width: 100%;
+        display: none;
+        
+        &.show {
+            @media (max-width: $md) {
+                @include bg;
+            }
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                display: block;
+                text-align: right;
+                margin: 30px;
+                font-weight: 700;
+                
+                a {
+                    color: $text-color;
+                    text-decoration: none;
+                    transition: all ease .2s;
+
+                    i {
+                        margin-right: 5px;
+                        color: lighten($color: $text-color, $amount: 30)
+                    }
+                    
+                    &:hover {
+                        color: $link-color;
+                        i {
+                            color: $link-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $lg) {
+        &__menu {
+            display: none;
+        }
+
+        &__nav {
+            float: right;
+            display: block;
+            width: auto;
+
+            ul {
+                li {
+                    display: inline-block;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: $xxl) {
+        width: $xxl;
+    }
+}
+
+.conteudo {
+    margin: 20px auto;
+}
+
+.footer {
+    @include bg;
+    text-align: center;
+    margin-top: auto;
+    padding: 20px;
+    font-size: .8rem;
+    
+    .redes-sociais {
+        font-size: 1.2rem;
+        list-style: none;
+        margin-top: 10px;
+
+        li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    &-primario {
+        @include sombra(#ccc);
+        padding: 10px 30px;
+        text-decoration: none;
+        background-color: $bg;
+        color: $text-color;
+        border-radius: 5px;
+        margin: 30px;
+        display: inline-block;
+        transition: all .2s;
+        
+        &:hover {
+            background-color: $link-color;
+            color: $bg;
+        }
+    }
+}
+
+.banner {
+    img {
+        max-width: 100%;
+    }
+}
+
+.grid-veiculos {
+    display: grid;
+    grid-template-columns: auto;
+    
+    img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 10px;
+    }
+
+    &__coluna {
+        text-align: center;
+        @include sombra(#ccc);
+        border-radius: 10px;
+        margin: 10px;
+    }
+    
+    @media (min-width: $sm) {
+        grid-template-columns: repeat(2, 50%);
+        
+    }
+    @media (min-width: $lg) {
+        grid-template-columns: repeat(4, 25%);
+    }
+}
+
+.sobre {
+    margin: 30px;
+    border-radius: 10px;
+    @include sombra(#ccc);
+    display: flex;
+    flex-direction: column;
+    
+    &__img {
+        width: 100%;
+        min-height: 250px;
+        background-image: url(../img/loja.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    &__texto {
+        padding: 40px;
+        p {
+            margin: 20px;
+        }
+    }
+
+    @media (min-width: $md) {
+        flex-direction: row;
+
+        &__img {
+            border-radius: 10px 0 0 10px;
+            min-width: 300px;
+            min-height: 100%;
+        }
+    }
+}

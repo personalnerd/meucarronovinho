@@ -1,23 +1,23 @@
 <?php if ( !isset($pagina) ) exit; ?>
 
-<h1 class="main-center">Veículos em destaque</h1>
+<h1 class="text-center">Veículos em destaque</h1>
 
-<div class="main-grid-destaques">
-    <div class="main-grid-destaques-coluna">
-        <img src="imagens/1.jpg" alt="Kwid">
+<div class="grid-destaques">
+    <div class="grid-destaques__coluna">
+        <img src="img/1.jpg" alt="Kwid">
         <h2>Renault Kwid</h2>
         <p>
-            <a href="kwid" title="Kwid" class="main-btn">
+            <a href="kwid" title="Kwid" class="btn-primario">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 Detalhes
             </a>
         </p>
     </div>
-    <div class="main-grid-destaques-coluna">
-        <img src="imagens/2.jpg" alt="HB20">
+    <div class="grid-destaques__coluna">
+        <img src="img/2.jpg" alt="HB20">
         <h2>HB20</h2>
         <p>
-            <a href="hb20" title="HB20" class="main-btn">
+            <a href="hb20" title="HB20" class="btn-primario">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 Detalhes
             </a>

@@ -1,106 +1,151 @@
 @import 'variables';
 
 @mixin sombra($cor) {
-    padding: $padding;
     box-shadow: 0 0 10px $cor;
 }
 
 @mixin bg {
     background-color: $bg;
     display: inline-block;
-    width: 100%;   
-    box-sizing: border-box; 
+    width: 100%;
+}
+
+@mixin circulo($size) {
+    width: $size;
+    height: $size;
+    border-radius: $size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 * {
     padding: 0;
     margin: 0;
     font-family: $font;
+    box-sizing: border-box;
 }
 
 body {
     color: $text-color;
+    padding-top: $header-height;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
     @include bg;
+    @include sombra($text-color);
+    min-height: $header-height;
+    position: fixed;
+    top: 0;
 
-    & &-menu {
-        @include sombra($text-color);
+    &__logo img {
+        height: 70px;
+        margin-top: 5px
+    }
+
+    &__menu {
+        @include circulo(40px);
         text-decoration: none;
         float: right;
         margin: 20px;
-        display: none;
-        color: $text-color;
+        color: $text-color;        
+        transition: all ease .2s;
+
+        &:hover {
+            @include sombra($text-color);
+        }
     }
 
-    & &-nav {
-        float: right;
+    &__nav {        
+        width: 100%;
+        display: none;
+        
+        &.show {
+            @media (max-width: $md) {
+                @include bg;
+            }
+        }
 
         ul {
             list-style: none;
 
             li {
-                display: inline-block;
+                display: block;
+                text-align: right;
                 margin: 30px;
                 font-weight: 700;
                 
                 a {
                     color: $text-color;
                     text-decoration: none;
+                    transition: all ease .2s;
 
+                    i {
+                        margin-right: 5px;
+                        color: lighten($color: $text-color, $amount: 30)
+                    }
+                    
                     &:hover {
                         color: $link-color;
+                        i {
+                            color: $link-color;
+                        }
                     }
                 }
             }
         }
     }
-    
-    @media (max-width: 420px) {
-        & &-menu {
-            display: block;
-        }
 
-        & &-logo {
-            width: 280px;
-        }
-
-        & &-nav {
-            width: 100%;
+    @media (min-width: $lg) {
+        &__menu {
             display: none;
+        }
+
+        &__nav {
+            float: right;
+            display: block;
+            width: auto;
+
             ul {
                 li {
-                    display: block;
-                    width: 100%;
-                    text-align: center;
+                    display: inline-block;
+                    width: auto;
                 }
             }
         }
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+
+    &.main {
+        margin: 20px auto;
+    }
+
+    @media (min-width: $xxl) {
+        width: $xxl;
     }
 }
 
 .footer {
     @include bg;
     text-align: center;
+    margin-top: auto;
 }
 
-.container {    
-    width: $container;
-    margin: auto;
-
-    @media (max-width: 420px) {
-        width: 100%;
-    }
+.text-center {
+    text-align: center;
 }
 
-.main {
-    & &-center {
-        text-align: center;
-    }
-    & &-btn {
+.btn {
+    &-primario {
         @include sombra(#ccc);
-        padding: $padding 30px;
+        padding: 10px 30px;
         text-decoration: none;
         background-color: $bg;
         color: $text-color;
@@ -108,26 +153,26 @@ body {
         margin: 30px;
         display: inline-block;
         transition: all .2s;
-
+        
         &:hover {
             background-color: $link-color;
             color: $bg;
         }
     }
+}
 
-    & &-grid-destaques {
-        display: grid;
-        grid-template-columns: repeat(3, 33.33%);
+.grid-destaques {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
 
-        img {
-            width: 100%;
-        }
+    img {
+        width: 100%;
+    }
 
-        &-coluna {
-            text-align: center;
-            @include sombra(#ccc);
-            border-radius: 5px;
-            margin: 30px 10px;
-        }
+    &__coluna {
+        text-align: center;
+        @include sombra(#ccc);
+        border-radius: 5px;
+        margin: 30px 10px;
     }
 }

@@ -1,3 +1,3 @@
 function menu() {
-    $(".header-nav").toggle();
+    $(".header__nav").toggleClass("show");
 }

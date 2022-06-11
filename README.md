@@ -12,3 +12,7 @@ Foi implementado o deploy automático em servidor de hospedagem com cPanel, a pa
 
 ## Live Sass
 A pasta `.vscode` deveria estar no `gitignore` para não ser versionada, mas eu mantive no projeto para mostrar a configuração utilizada com o plugin Live Sass que utilizo no VS Code. Assim mantenho os arquivos SCSS organizados em uma pasta enquanto aponto para o plugin criar os arquivos `.css` em uma pasta separada.
+
+## Projeto em execução
+
+https://personalnerd.net.br/meucarronovinho
